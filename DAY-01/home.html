@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+</head>
+
+<body style="background-color: rgb(3, 4, 4); color: rgb(244, 244, 246); font-family: Arial, sans-serif; margin: 0; padding: 0;">
+    <div style="background-color: rgb(3, 4, 4); padding: 20px; text-align: center;">
+        <h1 style="color: rgb(244, 244, 246); font-size: 36px; margin: 0;">
+            HTML Table Example
+        </h1>
+        <nav style="background-color: lightgray; padding: 10px; text-align: center;">
+            <a href="index.html" style="margin-right: 20px; text-decoration: none; color: black;">Home</a>
+            <a href="table.html" style="margin-right: 20px; text-decoration: none; color: black;">Table</a>
+            <a href="form.html" style="text-decoration: none; color: black;">Form</a>
+        </nav>
+    </div>
+    <div>
+        <h1 Style="text-align:center; color:blue; background-color:lightblue;">
+            HTML Table
+        </h1>
+        <h2 Style="text-align:center; color:darkgreen;">
+            Student Details
+        </h2>
+
+       <div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+        <table border="1">
+            <tr>
+                <th>Roll No.</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+        
+            <tr>
+                <td>101</td>
+                <td>Kanhaiya</td>
+                <td>MCA</td>
+                <td>85</td>
+            </tr>
+        
+            <tr>
+                <td>102</td>
+                <td>Rahul</td>
+                <td>MCA</td>
+                <td>78</td>
+            </tr>
+        
+            <tr>
+                <td>103</td>
+                <td>Amit</td>
+                <td>MCA</td>
+                <td>82</td>
+            </tr>
+        </table>
+       </div>
+       <div>
+        <div>
+            <h1 Style="text-align:center; color:blue; background-color:lightblue; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                Add Student Details
+            </h1>
+        </div>
+        <form id="studentForm" style="color: rgb(223, 26, 4); align-items: center; justify-content: center;" >
+            <label for="rollno">Roll No:</label>
+        <input type="text" id="rollno" name="rollno"><br><br>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course"><br><br>
+        <label for="marks">Marks:</label>
+        <input type="text" id="marks" name="marks"><br><br>
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender"><br><br>
+        <label for="course">Course:</label>
+        <select name="course" id="course">
+            <option value="MCA">MCA</option>
+            <option value="MBA">MBA</option>
+            <option value="MSC">MSC</option>
+        </select><br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">'Male'
+        <input type="radio" id="female" name="gender" value="female">'Female'<br><br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" max="2003-12-31"><br><br>
+        
+        <button type="button" onclick="addRow()">Add Student</button>
+        </form>
+       </div>
+       <div>
+        <h1 Style="text-align:center; color:blue; background-color:lightblue; margin-top: 20px; padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            image and video
+        </h1 >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZaI8TkBBxqmBX162fHvMa6MLc4XFqVuMXeoIbD8FinA&s=10" alt="Image" width="400" height="400">
+        <video width="640" controls>
+            <source src="https://cdn.truefilesize.com/mp4/sample-10mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+         </div>
+         <footer style="text-align:center; margin-top: 20px; color: rgb(8, 7, 7); background-color: lightgray; padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            &copy; 2024 HTML Table Example. All rights reserved.
+        </footer>
+        <div style="text-align:center; margin-top: 20px;">
+            <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank" style="color: blue; text-decoration: none; font-weight: bold;">Learn more about HTML Tables</a>
+        </div>
+       </div>
+
+    </div>
+</body>
+
+</html>
