@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: rgb(3, 4, 4); padding: 20px; text-align: center;">
+        <header>
+            <h1 style="color: rgb(244, 244, 246);">Form Page</h1>
+        </header>
+        <nav style="background-color: rgb(3, 4, 4); padding: 10px; text-align: center;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="table.html">Table</a></li>
+                <li><a href="form.html">Form</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div style="background-color: rgb(49, 152, 152); padding: 20px; text-align: center;">
+       <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+            </select><br><br>
+            <input type="submit" value="Submit">
+
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+    
+</body>
+</html>
