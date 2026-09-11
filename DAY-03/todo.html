@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="justify-content: sp;">
+        <h1 style="color: rgb(241, 50, 7); text-align: center; font-weight: bold; background: #000; height: 40px; padding: 20px;">To Do List</h1>
+        <nav style="background: #000; height: 40px; padding: 10px; display: flex; justify-content: space-around;">
+            <li style="list-style: none; display: flex; gap: 20px; justify-content: space-around; font-weight: bold;">
+                <a href="index.html" style="color: white; text-decoration: none;">Home</a>
+                <a href="About.html" style="color: white; text-decoration: none;">About</a>
+                <a href="Contact.html" style="color: white; text-decoration: none;">Contact</a>
+                <a href="todo.html" style="color: white; text-decoration: none;">To Do List</a>
+            </li>
+        </nav>
+    </div>
+   <div style="display: flex; flex-direction: column; align-items: center; margin-top: 20px; gap: 10px;">
+     <input style="height: 80px; padding: 10px; border: 2px solid #e10505; width: 800px; color: rebeccapurple;" type="text" id="task" placeholder="Enter your task">
+    <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+        <button style="height: 50px; padding: 10px; border: 2px solid #e10505 ; border-radius: 5px; font-weight: bold; background: #e10505; color: white;" onclick="addTask()">Add Task</button>
+        <button style="height: 50px; padding: 10px; border: 2px solid #e10505 ; border-radius: 5px; font-weight: bold; background: #e10505; color: white;" onclick="editTask()">Edit Task</button>
+        <button style="height: 50px; padding: 10px; border: 2px solid #e10505 ; border-radius: 5px; font-weight: bold; background: #e10505; color: white;" onclick="clearTasks()">Clear Tasks</button>
+        <button style="height: 50px; padding: 10px; border: 2px solid #e10505 ; border-radius: 5px; font-weight: bold; background: #e10505; color: white;" onclick="deleteTask()">Delete Task</button>
+    </div>
+    <ul style="color: #77e105; height: 200px; overflow-y: scroll; width: 800px; border: 2px solid #19191b; gap: 10px;" id="taskList"></ul>
+   </div>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById('task');
+            const taskValue = taskInput.value.trim();
+
+            if (taskValue !== '') {
+                const taskList = document.getElementById('taskList');
+                const newTask = document.createElement('li');
+                newTask.textContent = taskValue;
+                taskList.appendChild(newTask);
+                taskInput.value = ''; // Clear the input field
+            } else {
+                alert('Please enter a task.');
+            }
+        }
+
+        function clearTasks() {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+
+        }
+        function editTask() {
+            const taskList = document.getElementById('taskList');
+            const tasks = taskList.getElementsByTagName('li');
+
+            if (tasks.length === 0) {
+                alert('No tasks to edit.');
+                return;
+            }
+
+            const taskIndex = prompt(`Enter the task number to edit (1-${tasks.length}):`);
+            const index = parseInt(taskIndex) - 1;
+
+            if (isNaN(index) || index < 0 || index >= tasks.length) {
+                alert('Invalid task number.');
+                return;
+            }
+
+            const newTaskValue = prompt('Enter the new task:');
+            if (newTaskValue !== null && newTaskValue.trim() !== '') {
+                tasks[index].textContent = newTaskValue.trim();
+            } else {
+                alert('Task cannot be empty.');
+            }
+        }
+        function deleteTask() {
+            const taskList = document.getElementById('taskList');
+            const tasks = taskList.getElementsByTagName('li');
+
+            if (tasks.length === 0) {
+                alert('No tasks to delete.');
+                return;
+            }
+
+            const taskIndex = prompt(`Enter the task number to delete (1-${tasks.length}):`);
+            const index = parseInt(taskIndex) - 1;
+
+            if (isNaN(index) || index < 0 || index >= tasks.length) {
+                alert('Invalid task number.');
+                return;
+            }
+
+            taskList.removeChild(tasks[index]);
+        }
+    </script>
+    
+</body>
+</html>
