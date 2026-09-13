@@ -24,7 +24,7 @@
     padding: 5px;
     margin-right: 10px;
 }
-.nav{
+.navbar{
     background: #000;
     height: 40px;
     padding: 10px;
@@ -47,6 +47,15 @@
     background: #000;
     height: 40px;
     padding: 20px;
+    justify-content: space-between;
+    li{
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        color: white;
+
+    }
+
 }
 .container button{
     width: 100px;
@@ -57,4 +66,15 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
+}
+.result{
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
